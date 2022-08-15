@@ -40,11 +40,31 @@ A list of compenents often found in a regular expression
 ### Quantifiers
 Quantifiers specifiy how many instances of a character, gorup, or character class must be present in the input for a match to be found.
 
+(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) 
+  
+         in the exmaple: \w{2,3}  it is looking of the character w 2 - 3 times 
+         this is looking for .com .co or something
+  
 ### OR Operator
 The or operator is this: "|". Exmaple: (desk1|desk2|desk3) matches desk1, desk1 desk2, desk1 desk2 desk3. needs to be in order like that 
 ### Character Classes
 
+throught out the email validator you can see \w which is looking for a pattern of letters
+
+Character classes:
+- \d is the character class for digits
+- \s is the character class for spaces 
+- \w is the character class for words which is actually just letters
+- \t is the character class for tab 
+- \n is the character class for new line 
 ### Flags
+regular expressions may have flags that affect the search 
+- "i" this flag means the search is case-insensitive
+- "g" looks for all matches, without it - only the first match is returned
+- "m" multiline mode
+- "s" enables dotall, which allows a dot to match newline character
+- "u" enables full Unicode support.
+- "y" sticky mode: searchign at the exact position in the text
 
 ### Grouping and Capturing
 
