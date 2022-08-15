@@ -67,14 +67,32 @@ regular expressions may have flags that affect the search
 - "y" sticky mode: searchign at the exact position in the text
 
 ### Grouping and Capturing
-
+example of email validation:   (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) 
+in the begining of the expression you can see the w+... this means w which is a class of letters repeated 1 or more times.
+at this point the Email Regex is starting to make sense,.. with our knowledges on classes, quantifiers, anchors and now grouping
+we can start to read what is happening in the code above.
 ### Bracket Expressions
+Bracekts indicate a set of characters to match. 
+[] any individual character between the brackers will match 
+
+example of email validation:   (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) 
+
+looking at: [\.-] in the begining is meant to match the username before the @ symbol.
+it begins with at least one word character, followed by more word characters or "." or "-". cannot contain ".." "--" ".-" or "-."
+
 
 ### Greedy and Lazy Match
+Greedy search: for ever position in the string - try to match the pattern at that position. if theres no match, go to the next position.
+
+lazy search: the opposite to the greed mode meaning repeat minimal number of times. Lazy search is enable by putting a question mark after the quantifier.
+
 
 ### Boundaries
+boundaries are like anchors in a way that it sets "boundaries" for the pattern search. 
+for example: /b\d\d\d\d/b matches a 4-digit number. so with the example of MN 2022 b\d\d\d\d/b outputs 2022 because its only looking for numbers
 
 ### Back-references
+Back refrences is getting into advanced but in simple english back refrencing is used to look for repeated text. A backrefrence in a regular expression identifies a previously matched group and looks for exactly the same text again. 
 
 ### Look-ahead and Look-behind
 
