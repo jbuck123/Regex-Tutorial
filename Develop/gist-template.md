@@ -98,4 +98,5 @@ Back refrences is getting into advanced but in simple english back refrencing is
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Solo assignment by James Buchmann 
+Github : https://github.com/jbuck123
